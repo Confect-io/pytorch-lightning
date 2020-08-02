@@ -469,8 +469,8 @@ class TrainerIOMixin(ABC):
 
         # restore the lr schedulers
         lr_schedulers = checkpoint['lr_schedulers']
-        for scheduler, lrs_state in zip(self.lr_schedulers, lr_schedulers):
-            scheduler['scheduler'].load_state_dict(lrs_state, strict=False)
+        # for scheduler, lrs_state in zip(self.lr_schedulers, lr_schedulers):
+            # scheduler['scheduler'].load_state_dict(lrs_state, strict=False)
 
     # ----------------------------------
     # PRIVATE OPS
